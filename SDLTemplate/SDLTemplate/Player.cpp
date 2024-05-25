@@ -1,4 +1,16 @@
 #include "Player.h"
+#include "Scene.h"
+
+Player::~Player()
+{
+
+	for (int i = 0; i < bullets.size(); i++)
+	{
+		delete bullets[i];
+	}
+
+	bullets.clear();
+}
 
 void Player::start()
 {
@@ -11,9 +23,13 @@ void Player::start()
 	width = 0;
 	height = 0;
 	speed = 2;
+	reloadTime = 8; // 8 frames or 0.13 seconds
+	currentReloadTime = 0;
 
 	//Query the texture... sick B)
 	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+
+	sound = SoundManager::loadSound("sound/334227__jradcoolness__laser.ogg");
 
 
 }
@@ -50,6 +66,63 @@ void Player::update()
 	{
 		speed = 2;
 	}
+
+	//DECREMENT THE PLAYER RELOAD TIME WOAHHH
+	if (currentReloadTime > 0)
+	{
+		currentReloadTime--;
+	}
+
+	if (app.keyboard[SDL_SCANCODE_F] && currentReloadTime == 0)
+	{
+		SoundManager::playSound(sound);
+		//Front Gun
+		Bullet* bullet = new Bullet(x + width , y - 2 + height/2  ,1 ,0 ,10 ); 
+
+		bullets.push_back(bullet);
+		
+		getScene()->addGameObject(bullet);
+	
+		bullet->start();
+	
+
+		currentReloadTime = reloadTime;
+	}
+
+	if (app.keyboard[SDL_SCANCODE_F] && currentReloadTime == 4)
+	{
+		//Upper Gun
+		Bullet* bullet2 = new Bullet(x + width - 50, y - 30 + height / 2, 1, 0, 10);
+		//Lower Gun
+		Bullet* bullet3 = new Bullet(x + width - 50, y + 20 + height / 2, 1, 0, 10);
+
+		bullets.push_back(bullet2);
+		bullets.push_back(bullet3);
+
+		getScene()->addGameObject(bullet2);
+		getScene()->addGameObject(bullet3);
+
+		bullet2->start();
+		bullet3->start();
+
+	}
+
+	
+
+	//this deletes the bullets when they go offscreen
+	for (int i = 0; i < bullets.size(); i++)
+	{
+		if (bullets[i]->getPositionX() > SCREEN_WIDTH)
+		{
+			//Cache the variable so we can delete it later
+			Bullet* bulletToErase = bullets[i];
+			bullets.erase(bullets.begin() + i);
+			delete bulletToErase;
+
+			break;
+		}
+	}
+	
 }
 
 void Player::draw()

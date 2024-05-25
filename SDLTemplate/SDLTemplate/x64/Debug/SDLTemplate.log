@@ -1,19 +1,8 @@
-﻿  draw.cpp
-  GameObject.cpp
-  GameScene.cpp
-  init.cpp
-  input.cpp
-  main.cpp
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(53,12): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(68,21): warning C4305: '+=': truncation from 'double' to 'float'
-  Player.cpp
-  Scene.cpp
-  SoundManager.cpp
-  text.cpp
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\text.cpp(43,30): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  util.cpp
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\util.cpp(37,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\util.cpp(40,12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-  SDLTemplate.vcxproj -> D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\x64\Debug\SDL-Template.exe
+﻿  Player.cpp
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(80,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(80,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(95,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(95,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(97,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(97,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SDLTemplate.vcxproj -> C:\Users\12012438\Source\Repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\x64\Debug\SDL-Template.exe
