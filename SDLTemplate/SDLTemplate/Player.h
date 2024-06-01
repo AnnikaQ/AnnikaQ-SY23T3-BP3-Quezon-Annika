@@ -15,6 +15,9 @@ public:
 	void update();
 	void draw();
 
+	int getPositionX();
+	int getPositionY();
+
 private:
 	SDL_Texture* texture;
 	Mix_Chunk* sound;

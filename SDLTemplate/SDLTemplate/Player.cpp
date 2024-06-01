@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Scene.h"
+#include "SoundManager.h"
 
 Player::~Player()
 {
@@ -89,24 +90,34 @@ void Player::update()
 		currentReloadTime = reloadTime;
 	}
 
-	if (app.keyboard[SDL_SCANCODE_F] && currentReloadTime == 4)
+	if (app.keyboard[SDL_SCANCODE_F] && currentReloadTime == 2)
 	{
 		//Upper Gun
 		Bullet* bullet2 = new Bullet(x + width - 50, y - 30 + height / 2, 1, 0, 10);
-		//Lower Gun
-		Bullet* bullet3 = new Bullet(x + width - 50, y + 20 + height / 2, 1, 0, 10);
 
 		bullets.push_back(bullet2);
-		bullets.push_back(bullet3);
 
 		getScene()->addGameObject(bullet2);
-		getScene()->addGameObject(bullet3);
 
 		bullet2->start();
-		bullet3->start();
 
 	}
 
+
+	if (app.keyboard[SDL_SCANCODE_F] && currentReloadTime == 3)
+	{
+		//Lower Gun
+		Bullet* bullet3 = new Bullet(x + width - 50, y + 20 + height / 2, 1, 0, 10);
+
+
+		bullets.push_back(bullet3);
+
+
+		getScene()->addGameObject(bullet3);
+
+
+		bullet3->start();
+	}
 	
 
 	//this deletes the bullets when they go offscreen
@@ -122,10 +133,22 @@ void Player::update()
 			break;
 		}
 	}
+
+
 	
 }
 
 void Player::draw()
 {
 	blit(texture, x, y);
+}
+
+int Player::getPositionX()
+{
+	return x;
+}
+
+int Player::getPositionY()
+{
+	return y;
 }
