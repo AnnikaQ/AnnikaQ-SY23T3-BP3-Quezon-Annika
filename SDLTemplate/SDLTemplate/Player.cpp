@@ -135,9 +135,6 @@ void Player::update()
 
 	}
 
-	
-
-	
 
 
 	

@@ -37,5 +37,6 @@ private:
 	std::vector<Bullet*> bullets;
 	bool isAlive;
 
+
 };
 

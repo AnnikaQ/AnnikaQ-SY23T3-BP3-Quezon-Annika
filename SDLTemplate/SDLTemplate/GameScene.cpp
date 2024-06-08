@@ -1,15 +1,28 @@
 #include "GameScene.h"
+#include "Explosion.h"
+#include "SoundManager.h"
+
+
 
 GameScene::GameScene()
 {
 	// Register and add game objects on constructor
 	player = new Player();
 	this->addGameObject(player);
+
+	points = 0;
+	backgroundTexture = nullptr;
+
 }
 
 GameScene::~GameScene()
 {
 	delete player;
+
+	if (backgroundTexture) {
+		SDL_DestroyTexture(backgroundTexture); 
+	}
+	
 }
 
 void GameScene::start()
@@ -17,8 +30,15 @@ void GameScene::start()
 	Scene::start();
 	// Initialize any scene logic here
 
+	initFonts();
 	currentSpawnTimer = 300;
 	spawnTime = 300; //spawn time of 5 seconds
+
+	SDL_Surface* backgroundSurface = IMG_Load("gfx/background.png");
+	if (backgroundSurface) {
+		backgroundTexture = SDL_CreateTextureFromSurface(app.renderer, backgroundSurface);
+		SDL_FreeSurface(backgroundSurface);
+	}
 
 	for (int i = 0; i < 3; i++)
 	{
@@ -26,12 +46,28 @@ void GameScene::start()
 	}
 
 	
-	
 }
 
 void GameScene::draw()
 {
+
+	SDL_RenderClear(app.renderer);
+
+	
+	if (backgroundTexture) {
+		SDL_RenderCopy(app.renderer, backgroundTexture, NULL, NULL);
+	}
+
 	Scene::draw();
+
+	drawText(110, 20, 255, 255, 255, TEXT_CENTER, "POINTS: %03d", points);
+
+	if (player->getIsAlive() == false)
+	{
+		drawText(650, 600, 255, 255, 255, TEXT_CENTER, "GAMEOVER!!");
+	}
+
+	SDL_RenderPresent(app.renderer);
 }
 
 void GameScene::update()
@@ -105,6 +141,7 @@ void GameScene::doCheckCollision()
 					{
 						despawnEnemy(currentEnemy);
 						// IF YOU DON'T DESPAWN YOU DIE OUGH
+						points++;
 						break;
 					}
 
@@ -117,12 +154,15 @@ void GameScene::doCheckCollision()
 
 void GameScene::spawn()
 {
+
 	enemy = new Enemy();
 	this->addGameObject(enemy);
 	enemy->setPlayerTarget(player);
 
 	enemy->setPosition(1260, 200 + (rand() % 250));
 	spawnedEnemies.push_back(enemy);
+
+
 }
 
 void GameScene::despawnEnemy(Enemy* enemy)
@@ -140,6 +180,11 @@ void GameScene::despawnEnemy(Enemy* enemy)
 	if (index != -1)
 	{
 		spawnedEnemies.erase(spawnedEnemies.begin() + index);
+
+		Explosion* explosion = new Explosion(enemy->getPositionX(), enemy->getPositionY());
+		this->addGameObject(explosion);
 		delete enemy;
 	}
 }
+
+
