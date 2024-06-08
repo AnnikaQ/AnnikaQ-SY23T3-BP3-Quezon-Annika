@@ -25,6 +25,9 @@ private:
 
 	std::vector < Enemy*> spawnedEnemies;
 
+	void checkSpawn();
+	void doCheckCollision();
 	void spawn();
+	void despawnEnemy(Enemy* enemy);
 };
 

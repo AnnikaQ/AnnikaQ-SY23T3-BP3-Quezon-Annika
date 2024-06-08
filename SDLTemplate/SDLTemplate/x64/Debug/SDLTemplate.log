@@ -1,2 +1,26 @@
-﻿  GameScene.cpp
-  SDLTemplate.vcxproj -> D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\x64\Debug\SDL-Template.exe
+﻿  Bullet.cpp
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Bullet.cpp(5,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Bullet.cpp(6,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Bullet.cpp(9,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Bullet.cpp(34,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Bullet.cpp(35,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  Enemy.cpp
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Enemy.cpp(34,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Enemy.cpp(43,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Enemy.cpp(44,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Enemy.cpp(70,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Enemy.cpp(70,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameScene.cpp
+  Player.cpp
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(98,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(98,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(113,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(113,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(125,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\Player.cpp(125,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(53,12): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
+C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(68,16): warning C4305: '+=': truncation from 'double' to 'float'
+  Generating Code...
+  SDLTemplate.vcxproj -> C:\Users\12012438\source\repos\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\x64\Debug\SDL-Template.exe

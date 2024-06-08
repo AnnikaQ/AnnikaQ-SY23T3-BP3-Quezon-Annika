@@ -25,6 +25,7 @@ void Enemy::start()
 	speed = 2;
 
 	sound = SoundManager::loadSound("sound/334227__jradcoolness__laser.ogg");
+	sound->volume = 64;
 
 
 	reloadTime = 60;// 60 frames for 1 seconds
@@ -32,6 +33,8 @@ void Enemy::start()
 
 	directionChangeTime = (rand() % 300) + 180; // 3 to 8 seconds
 	currentDirectionChangeTime = 0;
+
+	SDL_QueryTexture(texture, NULL, NULL, &width, &height);
 
 }
 
@@ -64,13 +67,12 @@ void Enemy::update()
 
 		SoundManager::playSound(sound);
 	
-		Bullet* bullet = new Bullet(x + width, y - 2 + height / 2,dx,dy,10);
+		Bullet* bullet = new Bullet(x + width, y - 2 + height / 2,dx,dy,10, Side::ENEMY_SIDE);
 
 		//for deletion
 		bullets.push_back(bullet);
 		getScene()->addGameObject(bullet);
 
-		bullet->start();
 
 		// reset timer
 		currentReloadTime = reloadTime;
@@ -107,4 +109,24 @@ void Enemy::setPosition(int xPos, int yPos)
 
 	this->x = xPos;
 	this->y = yPos;
+}
+
+int Enemy::getPositionX()
+{
+	return x;
+}
+
+int Enemy::getPositionY()
+{
+	return y;
+}
+
+int Enemy::getWidth()
+{
+	return width;
+}
+
+int Enemy::getHeight()
+{
+	return height;
 }
