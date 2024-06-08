@@ -4,6 +4,9 @@
 #include "Player.h"
 #include "Enemy.h"
 #include <vector>
+#include "text.h"
+#include "init.h"
+#include "draw.h"
 
 
 class GameScene : public Scene
@@ -29,5 +32,9 @@ private:
 	void doCheckCollision();
 	void spawn();
 	void despawnEnemy(Enemy* enemy);
+
+	int points;
+
+	SDL_Texture* backgroundTexture;
 };
 

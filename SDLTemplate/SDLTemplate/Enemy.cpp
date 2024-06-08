@@ -25,7 +25,7 @@ void Enemy::start()
 	speed = 2;
 
 	sound = SoundManager::loadSound("sound/334227__jradcoolness__laser.ogg");
-	sound->volume = 64;
+	sound->volume = 40;
 
 
 	reloadTime = 60;// 60 frames for 1 seconds
