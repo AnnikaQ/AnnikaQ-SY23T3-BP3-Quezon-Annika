@@ -48,7 +48,7 @@ void Enemy::update()
 
 	if (currentDirectionChangeTime == 0)
 	{
-		directionY = -directionY;
+		directionX = -directionX;
 		currentDirectionChangeTime = directionChangeTime;
 	}
 
@@ -59,8 +59,8 @@ void Enemy::update()
 
 	if (currentReloadTime == 0)
 	{
-		float dx = -1;
-		float dy = 0;
+		float dx = 0;
+		float dy = 1;
 
 		calcSlope(playerTarget->getPositionX(), playerTarget->getPositionY(), x, y, &dx, &dy);
 

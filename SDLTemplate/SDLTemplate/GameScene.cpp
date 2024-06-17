@@ -60,11 +60,11 @@ void GameScene::draw()
 
 	Scene::draw();
 
-	drawText(110, 20, 255, 255, 255, TEXT_CENTER, "POINTS: %03d", points);
+	drawText(370, 20, 255, 255, 255, TEXT_CENTER, "POINTS: %03d", points);
 
 	if (player->getIsAlive() == false)
 	{
-		drawText(650, 600, 255, 255, 255, TEXT_CENTER, "GAMEOVER!!");
+		drawText(370, 370, 255, 255, 255, TEXT_CENTER, "GAMEOVER!!");
 	}
 
 	SDL_RenderPresent(app.renderer);
@@ -73,8 +73,9 @@ void GameScene::draw()
 void GameScene::update()
 {
 	Scene::update();
-
 	
+	
+
 	checkSpawn();
 	doCheckCollision();
 	
@@ -159,7 +160,7 @@ void GameScene::spawn()
 	this->addGameObject(enemy);
 	enemy->setPlayerTarget(player);
 
-	enemy->setPosition(1260, 200 + (rand() % 250));
+	enemy->setPosition(100 + (rand() % 450), 100);
 	spawnedEnemies.push_back(enemy);
 
 
@@ -167,6 +168,8 @@ void GameScene::spawn()
 
 void GameScene::despawnEnemy(Enemy* enemy)
 {
+
+
 	int index = -1;
 	for (int i = 0; i < spawnedEnemies.size(); i++)
 	{

@@ -19,8 +19,8 @@ void Player::start()
 	texture = loadTexture("gfx/player.png");
 
 	//Variables innit?
-	x = 100;
-	y = 100;
+	x = 335;
+	y = 800;
 	width = 0;
 	height = 0;
 	speed = 2;
@@ -95,7 +95,7 @@ void Player::update()
 	{
 		SoundManager::playSound(sound);
 		//Front Gun
-		Bullet* bullet = new Bullet(x + width , y - 2 + height/2  ,1 ,0 ,10, Side::PLAYER_SIDE ); 
+		Bullet* bullet = new Bullet(x + width , y - 2 + height/2  ,0 ,-1,10, Side::PLAYER_SIDE ); 
 
 		bullets.push_back(bullet);
 		
@@ -110,7 +110,7 @@ void Player::update()
 	if (app.keyboard[SDL_SCANCODE_F] && currentReloadTime == 2)
 	{
 		//Upper Gun
-		Bullet* bullet2 = new Bullet(x + width - 50, y - 30 + height / 2, 1, 0, 10, Side::PLAYER_SIDE);
+		Bullet* bullet2 = new Bullet(x + width - 50, y - 30 + height / 2, 0, -1, 10, Side::PLAYER_SIDE);
 
 		bullets.push_back(bullet2);
 
@@ -122,7 +122,7 @@ void Player::update()
 	else if (currentReloadTime == 3)
 	{
 		//Lower Gun
-		Bullet* bullet3 = new Bullet(x + width - 50, y + 20 + height / 2, 1, 0, 10, Side::PLAYER_SIDE);
+		Bullet* bullet3 = new Bullet(x + width - 50, y + 20 + height / 2, 0, -1, 10, Side::PLAYER_SIDE);
 
 
 		bullets.push_back(bullet3);

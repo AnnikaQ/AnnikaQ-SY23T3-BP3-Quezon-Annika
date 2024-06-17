@@ -1,7 +1,2 @@
 ﻿  GameScene.cpp
-  main.cpp
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(53,12): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
-D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\SDLTemplate\main.cpp(68,21): warning C4305: '+=': truncation from 'double' to 'float'
-  Generating Code...
   SDLTemplate.vcxproj -> D:\BENILDE\BASPRG3\SY23T3-BP3-Quezon-Annika\AnnikaQ-SY23T3-BP3-Quezon-Annika\SDLTemplate\x64\Debug\SDL-Template.exe
